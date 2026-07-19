@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Louis Carrico-Braun's data analytics portfolio: Power BI, Microsoft Fabric, DAX, SQL, REST APIs, and React projects."
+    />
+    <meta name="theme-color" content="#f5f3ee" />
+    <meta property="og:title" content="Louis Carrico-Braun — Data Analytics Portfolio" />
+    <meta
+      property="og:description"
+      content="Decision-ready analytics experiences built with Power BI, Microsoft Fabric, APIs, and React."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <title>Louis Carrico-Braun — Data Analytics Portfolio</title>
+    <script>
+      try {
+        const savedTheme = localStorage.getItem("portfolio-theme");
+        if (savedTheme === "dark" || savedTheme === "light") {
+          document.documentElement.dataset.theme = savedTheme;
+        }
+      } catch (_) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
