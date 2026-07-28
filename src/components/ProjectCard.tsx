@@ -25,7 +25,11 @@ export function ProjectCard({ project, index, onOpenReport }: ProjectCardProps) 
           <time>{project.date}</time>
         </div>
         <h3>{project.title}</h3>
-        <p className="project-summary">{project.summary}</p>
+        <div className="project-summary" style={{ display: "grid", gap: 12 }}>
+          {project.summary.split("\n\n").map((paragraph) => (
+            <p key={paragraph} style={{ margin: 0 }}>{paragraph}</p>
+          ))}
+        </div>
 
         <ul className="contribution-list" aria-label="Key contributions">
           {project.contributions.map((contribution) => (

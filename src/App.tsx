@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import {
-  ArrowDown,
+  ArrowUp,
   ArrowRight,
   BarChart3,
   BriefcaseBusiness,
@@ -41,7 +41,7 @@ function App() {
   const [theme, setTheme] = useState<Theme>(getInitialTheme);
   const [activeReport, setActiveReport] = useState<Project | null>(null);
   const orderedProjects = useMemo(
-    () => [...projects].sort((a, b) => Number(Boolean(b.featured)) - Number(Boolean(a.featured))),
+    () => [...projects].sort((a, b) => a.displayOrder - b.displayOrder),
     [],
   );
 
@@ -63,43 +63,6 @@ function App() {
       <SiteHeader theme={theme} onThemeToggle={() => setTheme((current) => current === "light" ? "dark" : "light")} />
 
       <main id="main-content">
-        <section className="hero section-shell" id="top">
-          <div className="container hero-grid">
-            <div className="hero-copy">
-              <p className="eyebrow"><Sparkles size={15} /> Data analytics &amp; BI portfolio</p>
-              <h1>
-                I turn complex data into <span>clear decisions.</span>
-              </h1>
-              <p className="hero-intro">
-                I build end-to-end analytics experiences with Power BI, Microsoft Fabric, APIs, and modern web technology—from raw source data to an interface people can actually use.
-              </p>
-              <div className="hero-actions">
-                <a className="button button--primary" href="#projects">
-                  Explore projects <ArrowDown size={17} />
-                </a>
-                <a className="button button--secondary" href={profile.linkedin} target="_blank" rel="noreferrer">
-                  View LinkedIn <ArrowRight size={17} />
-                </a>
-              </div>
-              <dl className="hero-facts">
-                <div><dt>{String(projects.length).padStart(2, "0")}</dt><dd>Featured projects</dd></div>
-                <div><dt>BI + Web</dt><dd>End-to-end delivery</dd></div>
-                <div><dt>API → UI</dt><dd>Full workflow thinking</dd></div>
-              </dl>
-            </div>
-            <HeroVisual />
-          </div>
-        </section>
-
-        <section className="capability-band" aria-label="Core capabilities">
-          <div className="container capability-inner">
-            <span className="capability-label">Core toolkit</span>
-            <div className="capability-list">
-              {capabilities.map((capability) => <span key={capability}>{capability}</span>)}
-            </div>
-          </div>
-        </section>
-
         <section className="projects-section section-shell" id="projects">
           <div className="container">
             <div className="section-heading">
@@ -121,6 +84,43 @@ function App() {
                   onOpenReport={setActiveReport}
                 />
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="hero section-shell" id="top">
+          <div className="container hero-grid">
+            <div className="hero-copy">
+              <p className="eyebrow"><Sparkles size={15} /> Data analytics &amp; BI portfolio</p>
+              <h1>
+                I turn complex data into <span>clear decisions.</span>
+              </h1>
+              <p className="hero-intro">
+                I build end-to-end analytics experiences with Power BI, Microsoft Fabric, APIs, and modern web technology—from raw source data to an interface people can actually use.
+              </p>
+              <div className="hero-actions">
+                <a className="button button--primary" href="#projects">
+                  Explore projects <ArrowUp size={17} />
+                </a>
+                <a className="button button--secondary" href={profile.linkedin} target="_blank" rel="noreferrer">
+                  View LinkedIn <ArrowRight size={17} />
+                </a>
+              </div>
+              <dl className="hero-facts">
+                <div><dt>{String(projects.length).padStart(2, "0")}</dt><dd>Portfolio projects</dd></div>
+                <div><dt>BI + Web</dt><dd>End-to-end delivery</dd></div>
+                <div><dt>API → UI</dt><dd>Full workflow thinking</dd></div>
+              </dl>
+            </div>
+            <HeroVisual />
+          </div>
+        </section>
+
+        <section className="capability-band" aria-label="Core capabilities">
+          <div className="container capability-inner">
+            <span className="capability-label">Core toolkit</span>
+            <div className="capability-list">
+              {capabilities.map((capability) => <span key={capability}>{capability}</span>)}
             </div>
           </div>
         </section>
@@ -196,7 +196,7 @@ function App() {
         <div className="container footer-inner">
           <p>© {new Date().getFullYear()} {profile.name}</p>
           <p>Designed around clarity, built with React &amp; TypeScript.</p>
-          <a href="#top">Back to top ↑</a>
+          <a href="#projects">Back to top ↑</a>
         </div>
       </footer>
       <ReportEmbedDialog project={activeReport} onClose={() => setActiveReport(null)} />

@@ -22,7 +22,7 @@ export function SiteHeader({ theme, onThemeToggle }: SiteHeaderProps) {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <a className="brand" href="#top" onClick={closeMenu} aria-label={`${profile.name}, home`}>
+        <a className="brand" href="#projects" onClick={closeMenu} aria-label={`${profile.name}, home`}>
           <span className="brand-mark" aria-hidden="true">LC</span>
           <span className="brand-copy">
             <strong>{profile.name}</strong>

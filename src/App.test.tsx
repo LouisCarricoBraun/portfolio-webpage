@@ -10,14 +10,35 @@ beforeEach(() => {
 });
 
 describe("portfolio", () => {
+  it("shows selected work as the first page section", () => {
+    render(<App />);
+
+    const main = screen.getByRole("main");
+    const firstSection = main.querySelector(":scope > section");
+
+    expect(firstSection).toHaveAttribute("id", "projects");
+  });
+
   it("renders every project from the project data file", () => {
     render(<App />);
 
     const cards = screen.getAllByTestId("project-card");
     expect(cards).toHaveLength(projects.length);
-    expect(within(cards[0]).getByRole("heading", {
-      name: "FIFA World Cup 2026 Analytics Dashboard",
-    })).toBeInTheDocument();
+    expect(
+      cards.map((card) => within(card).getByRole("heading").textContent),
+    ).toEqual([
+      "Microsoft Fabric Sales Analytics App",
+      "MLB Analytics Dashboard",
+      "FAANG Stock Analytics Dashboard",
+      "Product Sales Analysis Dashboard",
+      "FIFA World Cup 2026 Analytics Dashboard",
+    ]);
+
+    expect(cards[0]).toHaveClass("is-featured");
+    for (const card of cards.slice(1)) {
+      expect(card).not.toHaveClass("is-featured");
+    }
+
     for (const project of projects) {
       expect(screen.getByRole("heading", { name: project.title })).toBeInTheDocument();
     }
