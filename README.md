@@ -17,7 +17,7 @@ All portfolio entries live in [`src/data/projects.ts`](src/data/projects.ts). To
 
 1. Copy an existing object in the `projects` array.
 2. Give it a unique `slug`, title, date, summary, contribution list, technology list, and project link.
-3. Pick a preview style: `world-cup`, `fabric`, `sales`, or `generic`.
+3. Pick a preview style: `world-cup`, `fabric`, `sales`, `brokerage`, or `generic`.
 4. Pick an accent: `cobalt`, `mint`, or `coral`.
 5. Set `featured: true` only when the project should occupy the large lead position.
 6. For a public embeddable project, add an `embed` object containing its iframe `title`, public `src` URL, `kind` (`power-bi` or `web-app`), and `sourceLabel`.

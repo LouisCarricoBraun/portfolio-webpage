@@ -121,6 +121,41 @@ function SalesVisual() {
   );
 }
 
+function BrokerageVisual() {
+  return (
+    <div className="project-mock brokerage-mock">
+      <MockChrome label="Brokerage database · SQL Server" />
+      <div className="brokerage-body">
+        <div className="brokerage-explorer">
+          <img
+            src={`${import.meta.env.BASE_URL}brokerage-object-explorer.png`}
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
+        <div className="brokerage-schema">
+          <div className="schema-heading">
+            <span><small>Relational model</small><strong>Brokerage schema</strong></span>
+            <i>PK / FK</i>
+          </div>
+          <div className="schema-stats">
+            <span><strong>5</strong><small>tables</small></span>
+            <span><strong>48</strong><small>sample rows</small></span>
+            <span><strong>2</strong><small>SQL dialects</small></span>
+          </div>
+          <div className="schema-flow">
+            <span className="schema-table schema-users"><strong>Users</strong><small>username · PK</small></span>
+            <span className="schema-table schema-accounts"><strong>Accounts</strong><small>user · FK</small></span>
+            <span className="schema-table schema-instruments"><strong>Instruments</strong><small>symbol · PK</small></span>
+            <span className="schema-table schema-trades"><strong>Trades</strong><small>account + symbol</small></span>
+            <span className="schema-table schema-positions"><strong>Positions</strong><small>composite key</small></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function GenericVisual() {
   return (
     <div className="project-mock generic-mock">
@@ -136,6 +171,7 @@ export function ProjectVisual({ variant, title }: ProjectVisualProps) {
       {variant === "fabric" && <FabricVisual />}
       {variant === "world-cup" && <WorldCupVisual />}
       {variant === "sales" && <SalesVisual />}
+      {variant === "brokerage" && <BrokerageVisual />}
       {variant === "generic" && <GenericVisual />}
     </div>
   );

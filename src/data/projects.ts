@@ -1,4 +1,4 @@
-export type ProjectVisual = "world-cup" | "fabric" | "sales" | "generic";
+export type ProjectVisual = "world-cup" | "fabric" | "sales" | "brokerage" | "generic";
 
 export type ProjectLink = {
   label: string;
@@ -238,5 +238,38 @@ export const projects: Project[] = [
     },
     visual: "sales",
     accent: "coral",
+  },
+  {
+    slug: "brokerage-accounts-sql-database",
+    displayOrder: 6,
+    title: "Brokerage Accounts SQL Database",
+    eyebrow: "SQL Server · Oracle",
+    date: "Aug 2026",
+    summary:
+      "Designed and implemented a relational database for a simplified brokerage platform, modeling users, accounts, investment instruments, trades, and current positions. The project includes an original Oracle SQL implementation and a Microsoft SQL Server adaptation, with reproducible schema creation, sample data, analytical queries, transaction demonstrations, and cleanup scripts.",
+    contributions: [
+      "Modeled five related tables with primary keys, foreign keys, referential integrity, and a composite position key.",
+      "Built complete creation and sample-data scripts for both Oracle SQL and Microsoft SQL Server.",
+      "Wrote analytical queries using joins, aggregation, common table expressions, subqueries, and NOT EXISTS.",
+      "Demonstrated safe data changes with explicit transactions, rollback behavior, and reusable cleanup scripts.",
+    ],
+    technologies: [
+      "SQL",
+      "T-SQL",
+      "Oracle SQL",
+      "SQL Server",
+      "Relational Modeling",
+      "Transactions",
+    ],
+    links: [
+      {
+        label: "View brokerage source",
+        href: "https://github.com/HughHashes/brokerage-sql-db-project",
+        kind: "primary",
+      },
+    ],
+    dataNote: "All names and financial values are educational sample data.",
+    visual: "brokerage",
+    accent: "cobalt",
   },
 ];

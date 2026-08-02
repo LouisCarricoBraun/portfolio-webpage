@@ -32,6 +32,7 @@ describe("portfolio", () => {
       "FAANG Stock Analytics Dashboard",
       "Product Sales Analysis Dashboard",
       "FIFA World Cup 2026 Analytics Dashboard",
+      "Brokerage Accounts SQL Database",
     ]);
 
     expect(cards[0]).toHaveClass("is-featured");
