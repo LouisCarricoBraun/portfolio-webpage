@@ -75,7 +75,7 @@ export const projects: Project[] = [
       },
     ],
     embed: {
-      title: "Sample Public Sales Dashboard",
+      title: "Sample Public Sales Interactive Report",
       src: "https://hughhashes.github.io/fabric-sample-app/",
       kind: "web-app",
       sourceLabel: "GitHub Pages",
@@ -88,13 +88,13 @@ export const projects: Project[] = [
   {
     slug: "fifa-world-cup-2026",
     displayOrder: 5,
-    title: "FIFA World Cup 2026 Analytics Dashboard",
+    title: "FIFA World Cup 2026 Analytics Interactive Report",
     eyebrow: "Power BI · Sports Analytics",
     date: "Jun–Jul 2026",
     summary:
-      "Built an interactive FIFA World Cup analytics dashboard in Power BI using data from the Sportradar REST API. Designed an end-to-end BI workflow including API extraction, Power Query transformations, data modeling, DAX measures, and visual storytelling across tournament, team, player, match, and venue insights. The project includes optimized API usage, structured tables for teams, matches, venues, players, logos, flags, and calendar data, plus interactive report pages with slicers, KPI cards, maps, player statistics, and custom visual elements. This project strengthened my ability to work with complex JSON data, build scalable Power BI models, and turn raw sports data into decision-ready analytics.",
+      "Built an interactive FIFA World Cup analytics report in Power BI using data from the Sportradar REST API. Designed an end-to-end BI workflow including API extraction, Power Query transformations, data modeling, DAX measures, and visual storytelling across tournament, team, player, match, and venue insights. The project includes optimized API usage, structured tables for teams, matches, venues, players, logos, flags, and calendar data, plus interactive report pages with slicers, KPI cards, maps, player statistics, and custom visual elements. This project strengthened my ability to work with complex JSON data, build scalable Power BI models, and turn raw sports data into decision-ready analytics.",
     contributions: [
-      "Built an API-to-dashboard workflow using Power Query to transform nested JSON into structured analytical tables.",
+      "Built an API-to-interactive-report workflow using Power Query to transform nested JSON into structured analytical tables.",
       "Modeled teams, matches, players, venues, calendar data, flags, and logos for reusable reporting.",
       "Created DAX measures and interactive KPIs, maps, slicers, player statistics, and comparison views.",
     ],
@@ -108,13 +108,13 @@ export const projects: Project[] = [
     ],
     links: [
       {
-        label: "Open FIFA dashboard in new tab",
+        label: "Open FIFA interactive report in new tab",
         href: "https://app.fabric.microsoft.com/view?r=eyJrIjoiMDE4YzI1ZDMtMzM0ZC00NjlkLTg4NGYtOTBiNTMxNWM0MTcwIiwidCI6IjllMGNmMGU4LWY5YWYtNDliNy1iZTM0LTc1YjI5NDI5OTY4YSJ9&pageName=28d5900832ee7970b6db",
         kind: "secondary",
       },
     ],
     embed: {
-      title: "World_Cup_2026_Dashboard",
+      title: "FIFA World Cup 2026 Analytics Interactive Report",
       src: "https://app.fabric.microsoft.com/view?r=eyJrIjoiMDE4YzI1ZDMtMzM0ZC00NjlkLTg4NGYtOTBiNTMxNWM0MTcwIiwidCI6IjllMGNmMGU4LWY5YWYtNDliNy1iZTM0LTc1YjI5NDI5OTY4YSJ9&pageName=28d5900832ee7970b6db",
       kind: "power-bi",
       sourceLabel: "Microsoft Fabric",
@@ -125,11 +125,11 @@ export const projects: Project[] = [
   {
     slug: "faang-stock-analytics",
     displayOrder: 3,
-    title: "FAANG Stock Analytics Dashboard",
+    title: "FAANG Stock Analytics Interactive Report",
     eyebrow: "Power BI · Financial Analytics",
     date: "Jul 2026",
     summary:
-      "I built this Power BI dashboard by consolidating historical CSV price data for Amazon, Apple, Meta, Google, and Netflix into a normalized stock-price fact table. Power Query cleans and types the files, maps company and ticker values, and appends incremental daily prices from the Twelve Data API while retaining the local history if the API is unavailable. I designed company and date dimensions and created DAX measures for indexed returns, moving averages, trading volume, annualized and rolling volatility, drawdown, and 52-week ranges. The finished report organizes those calculations into Overview, Performance Comparison, Company Deep Dive, and Risk & Volatility pages so viewers can compare companies and investigate an individual stock.",
+      "I built this Power BI interactive report by consolidating historical CSV price data for Amazon, Apple, Meta, Google, and Netflix into a normalized stock-price fact table. Power Query cleans and types the files, maps company and ticker values, and appends incremental daily prices from the Twelve Data API while retaining the local history if the API is unavailable. I designed company and date dimensions and created DAX measures for indexed returns, moving averages, trading volume, annualized and rolling volatility, drawdown, and 52-week ranges. The finished report organizes those calculations into Overview, Performance Comparison, Company Deep Dive, and Risk & Volatility pages so viewers can compare companies and investigate an individual stock.",
     contributions: [
       "Combined five historical stock-price files into a consistent fact table and added a resilient incremental API-refresh process.",
       "Built date and company dimensions with DAX measures for returns, moving averages, volume, volatility, drawdown, and price ranges.",
@@ -146,13 +146,13 @@ export const projects: Project[] = [
     ],
     links: [
       {
-        label: "Open FAANG dashboard in new tab",
+        label: "Open FAANG interactive report in new tab",
         href: "https://app.fabric.microsoft.com/view?r=eyJrIjoiNzI3Y2IxN2UtMjdlNy00OTgxLWI0MGUtNTBjYzBjZjZiZTYxIiwidCI6IjllMGNmMGU4LWY5YWYtNDliNy1iZTM0LTc1YjI5NDI5OTY4YSJ9",
         kind: "secondary",
       },
     ],
     embed: {
-      title: "FAANG Stock Analytics Dashboard",
+      title: "FAANG Stock Analytics Interactive Report",
       src: "https://app.fabric.microsoft.com/view?r=eyJrIjoiNzI3Y2IxN2UtMjdlNy00OTgxLWI0MGUtNTBjYzBjZjZiZTYxIiwidCI6IjllMGNmMGU4LWY5YWYtNDliNy1iZTM0LTc1YjI5NDI5OTY4YSJ9",
       kind: "power-bi",
       sourceLabel: "Microsoft Fabric",
@@ -163,11 +163,11 @@ export const projects: Project[] = [
   {
     slug: "mlb-analytics",
     displayOrder: 2,
-    title: "MLB Analytics Dashboard",
+    title: "MLB Analytics Interactive Report",
     eyebrow: "Power BI · Baseball Analytics",
     date: "Jul 2026",
     summary:
-      "I built this multi-page Power BI dashboard by extracting 2026 MLB league, venue, team, player, and situational split data from the Sportradar API with reusable Power Query functions. Nested JSON responses were normalized into team, player, venue, hitting, pitching, fielding, and split tables, then related in a semantic model designed for cross-page filtering. I created DAX measures for core and advanced statistics including AVG, OPS, wOBA, wRC+, ERA, WHIP, FIP, WAR, fielding percentage, rankings, and home/away or handedness splits. The finished report organizes the analysis into overview, team and player pages, leaderboards, advanced metrics, and hitting, pitching, fielding, and situational split views.",
+      "I built this multi-page Power BI interactive report by extracting 2026 MLB league, venue, team, player, and situational split data from the Sportradar API with reusable Power Query functions. Nested JSON responses were normalized into team, player, venue, hitting, pitching, fielding, and split tables, then related in a semantic model designed for cross-page filtering. I created DAX measures for core and advanced statistics including AVG, OPS, wOBA, wRC+, ERA, WHIP, FIP, WAR, fielding percentage, rankings, and home/away or handedness splits. The finished report organizes the analysis into overview, team and player pages, leaderboards, advanced metrics, and hitting, pitching, fielding, and situational split views.",
     contributions: [
       "Created reusable Power Query functions to retrieve and safely normalize nested Sportradar league, venue, statistics, and split responses.",
       "Modeled player, team, opponent, venue, position, hitting, pitching, fielding, and situational split tables for coordinated analysis.",
@@ -185,13 +185,13 @@ export const projects: Project[] = [
     ],
     links: [
       {
-        label: "Open MLB dashboard in new tab",
+        label: "Open MLB interactive report in new tab",
         href: "https://app.fabric.microsoft.com/view?r=eyJrIjoiMjlkOTllNmEtMGQ4Mi00ZGVlLThhZWYtMGY5N2NjZThkNGI4IiwidCI6IjllMGNmMGU4LWY5YWYtNDliNy1iZTM0LTc1YjI5NDI5OTY4YSJ9&pageName=30d550e2ab321aa4d7f0",
         kind: "secondary",
       },
     ],
     embed: {
-      title: "MLB Analytics Dashboard",
+      title: "MLB Analytics Interactive Report",
       src: "https://app.fabric.microsoft.com/view?r=eyJrIjoiMjlkOTllNmEtMGQ4Mi00ZGVlLThhZWYtMGY5N2NjZThkNGI4IiwidCI6IjllMGNmMGU4LWY5YWYtNDliNy1iZTM0LTc1YjI5NDI5OTY4YSJ9&pageName=30d550e2ab321aa4d7f0",
       kind: "power-bi",
       sourceLabel: "Microsoft Fabric",
@@ -202,14 +202,14 @@ export const projects: Project[] = [
   {
     slug: "product-sales-analysis",
     displayOrder: 4,
-    title: "Product Sales Analysis Dashboard",
+    title: "Product Sales Analysis Interactive Report",
     eyebrow: "Power BI · Sales Intelligence",
     date: "Jul 2026",
     summary:
-      "I built this Power BI dashboard using sample product sales data to analyze sales performance, product trends, regional performance, customer behavior, sales team results, and fulfillment metrics. The dataset is structured as a star schema with a central sales fact table connected to dimensions for date, product, customer, region, store, salesperson, and order attributes. Because the data is sample data, the project focuses on dashboard design, data modeling, DAX development, and business intelligence storytelling rather than representing a real company.\n\n" +
-      "The dashboard is designed as a multi-page sales command center. It includes executive KPI cards, monthly sales trends, product and category analysis, regional heatmaps, sales team performance views, customer segmentation, and fulfillment/order attribute analysis. I also added drillthrough functionality for product-level detail pages, allowing users to move from a summary visual into a focused product performance view.\n\n" +
+      "I built this Power BI interactive report using sample product sales data to analyze sales performance, product trends, regional performance, customer behavior, sales team results, and fulfillment metrics. The dataset is structured as a star schema with a central sales fact table connected to dimensions for date, product, customer, region, store, salesperson, and order attributes. Because the data is sample data, the project focuses on interactive report design, data modeling, DAX development, and business intelligence storytelling rather than representing a real company.\n\n" +
+      "The interactive report is designed as a multi-page sales command center. It includes executive KPI cards, monthly sales trends, product and category analysis, regional heatmaps, sales team performance views, customer segmentation, and fulfillment/order attribute analysis. I also added drillthrough functionality for product-level detail pages, allowing users to move from a summary visual into a focused product performance view.\n\n" +
       "This project demonstrates my ability to build a clean Power BI report from a structured dataset, create reusable DAX measures, design interactive report pages, and present business insights in a professional, portfolio-ready format. Key measures include total sales, gross sales, discount impact, return rate, average order value, repeat customer rate, delivery lead time, promotion uptake rate, and prior-period comparisons.\n\n" +
-      "Skills displayed: Power BI, DAX, data modeling, star schema design, time intelligence, KPI design, drillthrough pages, conditional formatting, matrix heatmaps, scatter/bubble segmentation, custom HTML KPI cards, report theming, dashboard layout, and business analytics storytelling.",
+      "Skills displayed: Power BI, DAX, data modeling, star schema design, time intelligence, KPI design, drillthrough pages, conditional formatting, matrix heatmaps, scatter/bubble segmentation, custom HTML KPI cards, report theming, interactive report layout, and business analytics storytelling.",
     contributions: [
       "Modeled sample sales data as a star schema spanning date, product, customer, region, store, salesperson, and order dimensions.",
       "Developed reusable DAX measures for sales, discounts, returns, average order value, repeat customers, delivery lead time, promotions, and prior-period comparisons.",
@@ -225,13 +225,13 @@ export const projects: Project[] = [
     ],
     links: [
       {
-        label: "Open sales dashboard in new tab",
+        label: "Open sales interactive report in new tab",
         href: "https://app.fabric.microsoft.com/view?r=eyJrIjoiZjRmYWY1NzUtODQyYi00YzhjLWJiMzktNmI3OTBhZGRiZjMxIiwidCI6IjllMGNmMGU4LWY5YWYtNDliNy1iZTM0LTc1YjI5NDI5OTY4YSJ9",
         kind: "secondary",
       },
     ],
     embed: {
-      title: "Product Sales Dashboard",
+      title: "Product Sales Interactive Report",
       src: "https://app.fabric.microsoft.com/view?r=eyJrIjoiZjRmYWY1NzUtODQyYi00YzhjLWJiMzktNmI3OTBhZGRiZjMxIiwidCI6IjllMGNmMGU4LWY5YWYtNDliNy1iZTM0LTc1YjI5NDI5OTY4YSJ9",
       kind: "power-bi",
       sourceLabel: "Microsoft Fabric",

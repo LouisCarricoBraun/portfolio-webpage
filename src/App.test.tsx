@@ -28,10 +28,10 @@ describe("portfolio", () => {
       cards.map((card) => within(card).getByRole("heading").textContent),
     ).toEqual([
       "Microsoft Fabric Sales Analytics App",
-      "MLB Analytics Dashboard",
-      "FAANG Stock Analytics Dashboard",
-      "Product Sales Analysis Dashboard",
-      "FIFA World Cup 2026 Analytics Dashboard",
+      "MLB Analytics Interactive Report",
+      "FAANG Stock Analytics Interactive Report",
+      "Product Sales Analysis Interactive Report",
+      "FIFA World Cup 2026 Analytics Interactive Report",
       "Brokerage Accounts SQL Database",
     ]);
 

@@ -71,7 +71,7 @@ function App() {
                 <h2>Projects built from source to story.</h2>
               </div>
               <p>
-                Interactive dashboards and applications that combine sound data modeling, thoughtful analysis, and usable visual design.
+                Interactive reports and applications that combine sound data modeling, thoughtful analysis, and usable visual design.
               </p>
             </div>
 
@@ -178,7 +178,7 @@ function App() {
           <div className="container contact-card">
             <div>
               <p className="eyebrow">Connect</p>
-              <h2>Let&apos;s talk data, dashboards, and useful digital experiences.</h2>
+              <h2>Let&apos;s talk data, interactive reports, and useful digital experiences.</h2>
             </div>
             <div className="contact-actions">
               <a className="button button--light" href={profile.linkedin} target="_blank" rel="noreferrer">
