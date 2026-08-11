@@ -272,4 +272,39 @@ export const projects: Project[] = [
     visual: "brokerage",
     accent: "cobalt",
   },
+  {
+    slug: "bayesian-python-project",
+    displayOrder: 7,
+    title: "Bayesian Reasoning & Probabilistic Modeling",
+    eyebrow: "Python · Bayesian Statistics",
+    date: "Aug 2026",
+    summary:
+      "Developed a Python project exploring three applications of Bayesian reasoning and probabilistic modeling: Naive Bayes text classification, probabilistic inference, and Bayesian statistical analysis. The project uses word-frequency probabilities to distinguish between Shakespeare and George R. R. Martin, models simulated COVID infection likelihood from exposure and symptom evidence, and uses Beta distributions, Binomial likelihoods, and PyMC3 to compare critic approval rates for The Mandalorian and WandaVision. The project demonstrates how prior beliefs can be updated with observed evidence to produce posterior probabilities and distributions of uncertainty.",
+    contributions: [
+      "Implemented a Naive Bayes text classifier using word-frequency probabilities to distinguish between authors.",
+      "Built a Bayesian-style probability model that updates infection likelihood using exposure and symptom evidence.",
+      "Used Beta and Binomial distributions with PyMC3 to model uncertainty and compare posterior approval rates.",
+      "Applied Bayesian concepts including priors, likelihoods, posterior probabilities, and posterior distributions across multiple problems.",
+    ],
+    technologies: [
+      "Python",
+      "NumPy",
+      "Pandas",
+      "Matplotlib",
+      "Seaborn",
+      "PyMC3",
+      "Jupyter Notebook",
+      "Bayesian Statistics",
+    ],
+    links: [
+      {
+        label: "View source code",
+        href: "https://github.com/HughHashes/bayesian_python_project",
+        kind: "primary",
+      },
+    ],
+    dataNote: "Academic project; the COVID-related model uses simulated assumptions and is not a medical diagnostic model.",
+    visual: "generic",
+    accent: "mint",
+  },
 ];
