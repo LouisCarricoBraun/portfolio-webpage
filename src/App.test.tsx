@@ -47,31 +47,36 @@ describe("portfolio", () => {
   });
 
   it("uses safe external project links", () => {
-  render(<App />);
-
-  for (const project of projects) {
-    const projectHeading = screen.getByRole("heading", {
-      name: project.title,
-    });
-
-    const projectCard = projectHeading.closest("article");
-
-    expect(projectCard).not.toBeNull();
-
-    for (const link of project.links) {
-      const projectLink = within(projectCard!).getByRole("link", {
-        name: link.label,
-        exact: true,
+    render(<App />);
+  
+    for (const project of projects) {
+      const projectHeading = screen.getByRole("heading", {
+        name: project.title,
       });
-
-      expect(projectLink).toHaveAttribute("href", link.href);
-      expect(projectLink).toHaveAttribute(
-        "rel",
-        "noopener noreferrer",
-      );
+  
+      const projectCard = projectHeading.closest(
+        '[data-testid="project-card"]',
+      ) as HTMLElement | null;
+  
+      expect(projectCard).not.toBeNull();
+  
+      for (const link of project.links) {
+        const projectLink = within(projectCard as HTMLElement).getByRole(
+          "link",
+          {
+            name: link.label,
+            exact: true,
+          },
+        );
+  
+        expect(projectLink).toHaveAttribute("href", link.href);
+        expect(projectLink).toHaveAttribute(
+          "rel",
+          "noopener noreferrer",
+        );
+      }
     }
-  }
-});
+  });
   
   it("supports an accessible dark-mode toggle", () => {
     render(<App />);
