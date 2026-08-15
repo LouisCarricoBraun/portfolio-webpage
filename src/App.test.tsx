@@ -33,6 +33,7 @@ describe("portfolio", () => {
       "Product Sales Analysis Interactive Report",
       "FIFA World Cup 2026 Analytics Interactive Report",
       "Brokerage Accounts SQL Database",
+      "Bayesian Reasoning & Probabilistic Modeling",
     ]);
 
     expect(cards[0]).toHaveClass("is-featured");
