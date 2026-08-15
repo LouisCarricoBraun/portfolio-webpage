@@ -48,13 +48,24 @@ describe("portfolio", () => {
 
   it("uses safe external project links", () => {
     render(<App />);
-
-    for (const project of projects) {
+  
+    const cards = screen.getAllByTestId("project-card");
+  
+    projects.forEach((project, index) => {
+      const card = cards[index];
+  
       for (const link of project.links) {
-        expect(screen.getByRole("link", { name: link.label })).toHaveAttribute("href", link.href);
-        expect(screen.getByRole("link", { name: link.label })).toHaveAttribute("rel", "noopener noreferrer");
+        const projectLink = within(card).getByRole("link", {
+          name: link.label,
+        });
+  
+        expect(projectLink).toHaveAttribute("href", link.href);
+        expect(projectLink).toHaveAttribute(
+          "rel",
+          "noopener noreferrer",
+        );
       }
-    }
+    });
   });
 
   it("supports an accessible dark-mode toggle", () => {
