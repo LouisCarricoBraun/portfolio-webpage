@@ -46,7 +46,7 @@ describe("portfolio", () => {
     }
   });
 
-  it("uses safe external project links", () => {
+    it("uses safe external project links", () => {
     render(<App />);
   
     const cards = screen.getAllByTestId("project-card");
@@ -67,7 +67,7 @@ describe("portfolio", () => {
       }
     });
   });
-
+  
   it("supports an accessible dark-mode toggle", () => {
     render(<App />);
 
