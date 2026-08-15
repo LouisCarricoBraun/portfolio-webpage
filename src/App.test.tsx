@@ -46,7 +46,7 @@ describe("portfolio", () => {
     }
   });
 
-    it("uses safe external project links", () => {
+  it("uses safe external project links", () => {
     render(<App />);
   
     const cards = screen.getAllByTestId("project-card");
@@ -57,6 +57,7 @@ describe("portfolio", () => {
       for (const link of project.links) {
         const projectLink = within(card).getByRole("link", {
           name: link.label,
+          exact: true,
         });
   
         expect(projectLink).toHaveAttribute("href", link.href);
