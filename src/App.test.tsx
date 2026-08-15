@@ -56,18 +56,16 @@ describe("portfolio", () => {
   
       const projectCard = projectHeading.closest(
         '[data-testid="project-card"]',
-      ) as HTMLElement | null;
+      );
   
       expect(projectCard).not.toBeNull();
   
+      const card = projectCard as HTMLElement;
+  
       for (const link of project.links) {
-        const projectLink = within(projectCard as HTMLElement).getByRole(
-          "link",
-          {
-            name: link.label,
-            exact: true,
-          },
-        );
+        const projectLink = within(card).getByRole("link", {
+          name: link.label,
+        });
   
         expect(projectLink).toHaveAttribute("href", link.href);
         expect(projectLink).toHaveAttribute(
