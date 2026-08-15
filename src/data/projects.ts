@@ -65,7 +65,7 @@ export const projects: Project[] = [
     links: [
       {
         label: "Open public web app",
-        href: "https://hughhashes.github.io/fabric-sample-app/",
+        href: "https://louiscarricobraun.github.io/fabric-sample-app/",
         kind: "primary",
       },
       {
