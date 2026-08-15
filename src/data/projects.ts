@@ -76,7 +76,7 @@ export const projects: Project[] = [
     ],
     embed: {
       title: "Sample Public Sales Interactive Report",
-      src: "https://hughhashes.github.io/fabric-sample-app/",
+      src: "https://louiscarricobraun.github.io/fabric-sample-app/",
       kind: "web-app",
       sourceLabel: "GitHub Pages",
     },
