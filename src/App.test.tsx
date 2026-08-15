@@ -49,13 +49,17 @@ describe("portfolio", () => {
   it("uses safe external project links", () => {
     render(<App />);
   
-    const cards = screen.getAllByTestId("project-card");
+    for (const project of projects) {
+      const heading = screen.getByRole("heading", {
+        name: project.title,
+      });
   
-    projects.forEach((project, index) => {
-      const card = cards[index];
+      const card = heading.closest('[data-testid="project-card"]');
+  
+      expect(card).not.toBeNull();
   
       for (const link of project.links) {
-        const projectLink = within(card).getByRole("link", {
+        const projectLink = within(card as HTMLElement).getByRole("link", {
           name: link.label,
           exact: true,
         });
@@ -66,7 +70,7 @@ describe("portfolio", () => {
           "noopener noreferrer",
         );
       }
-    });
+    }
   });
   
   it("supports an accessible dark-mode toggle", () => {
