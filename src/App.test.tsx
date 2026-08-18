@@ -28,9 +28,9 @@ describe("portfolio", () => {
       cards.map((card) => within(card).getByRole("heading").textContent),
     ).toEqual([
       "FAANG Stock Analytics Interactive Report",
-      "MLB Analytics Interactive Report",
-      "Microsoft Fabric Sales Analytics App",
       "Product Sales Analysis Interactive Report",
+      "Microsoft Fabric Sales Analytics App",
+      "MLB Analytics Interactive Report",
       "FIFA World Cup 2026 Analytics Interactive Report",
       "Brokerage Accounts SQL Database",
       "Bayesian Reasoning & Probabilistic Modeling",
