@@ -37,7 +37,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "fabric-sales-analytics",
-    displayOrder: 1,
+    displayOrder: 3,
     title: "Microsoft Fabric Sales Analytics App",
     eyebrow: "Microsoft Fabric · React",
     date: "Jul 2026",
@@ -124,7 +124,7 @@ export const projects: Project[] = [
   },
   {
     slug: "faang-stock-analytics",
-    displayOrder: 3,
+    displayOrder: 1,
     title: "FAANG Stock Analytics Interactive Report",
     eyebrow: "Power BI · Financial Analytics",
     date: "Jul 2026",
