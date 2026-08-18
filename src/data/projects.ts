@@ -162,7 +162,7 @@ export const projects: Project[] = [
   },
   {
     slug: "mlb-analytics",
-    displayOrder: 2,
+    displayOrder: 4,
     title: "MLB Analytics Interactive Report",
     eyebrow: "Power BI · Baseball Analytics",
     date: "Jul 2026",
@@ -201,7 +201,7 @@ export const projects: Project[] = [
   },
   {
     slug: "product-sales-analysis",
-    displayOrder: 4,
+    displayOrder: 2,
     title: "Product Sales Analysis Interactive Report",
     eyebrow: "Power BI · Sales Intelligence",
     date: "Jul 2026",
