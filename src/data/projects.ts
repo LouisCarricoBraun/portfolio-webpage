@@ -81,7 +81,6 @@ export const projects: Project[] = [
       sourceLabel: "GitHub Pages",
     },
     dataNote: "Public demonstration uses snapshot sample data.",
-    featured: true,
     visual: "fabric",
     accent: "cobalt",
   },
@@ -158,6 +157,7 @@ export const projects: Project[] = [
       sourceLabel: "Microsoft Fabric",
     },
     visual: "generic",
+    featured: true,
     accent: "cobalt",
   },
   {
